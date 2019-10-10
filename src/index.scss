@@ -1,307 +1,297 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic');
 
 $borderColor: #a9b6c4;
-html{
-  font-size: 16px ;
-  font-family: 'Open Sans', sans-serif ;
-  @media screen and (max-width: 375px){
-    font-size: 15px;
-  }
-  
+html {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    @media screen and (max-width: 768px) {
+        font-size: 15px;
+    }
 }
 body {
-  margin: 0;
-  color: #3c6890 !important;
-  }  
-  
-  
- 
-  
-  .wrapper{
-   margin-top: 50px; 
+    margin: 0;
+    color: #3c6890 !important;
+}
+.wrapper {
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     min-height: 700px;
     flex-wrap: wrap;
-    @media screen and (max-width: 812px){
-      display: block;      
+    @media screen and (max-width: 995px) {
+        display: block;
     }
-   
 
-    ul{
-      list-style: none;
-      padding-left: 0;
+    ul {
+        list-style: none;
+        padding-left: 0;
     }
-    .rub_icon{
-      font-size: 22px;
-      margin-left: 10px;
+    .rub_icon {
+        font-size: 22px;
+        margin-left: 10px;
     }
-    .btn{
-      border:1px solid $borderColor;
-      color: #3c6890 ;
-      border-radius: 25px;
-      background-color: #fff;
-      font-size: .875rem;
-      margin-right: 5px;
-      cursor: pointer;
-      &:hover{
-        background-color: #d9e0e6;
-      }
-      &.active{
-        background-color: #0092ff;
-        color: #fff;
-      }
+    .btn {
+        border: 1px solid $borderColor;
+        color: #3c6890;
+        border-radius: 25px;
+        background-color: #fff;
+        font-size: 0.875rem;
+        margin-right: 5px;
+        cursor: pointer;
+        &:hover {
+            background-color: #d9e0e6;
+        }
+        &.active {
+            background-color: #0092ff;
+            color: #fff;
+        }
     }
-    .block_title{
-      font-size: 1rem;
-      &.biger{
-        font-size: 1.25rem;
-      }
+    .block_title {
+        font-size: 1rem;
+        &.biger {
+            font-size: 1.25rem;
+        }
     }
-    .input_block{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      flex-basis: 60%;
-      border: 1px solid $borderColor;
-      & > div {
-        flex-basis: 50%;
-      }
-      .input_block-amount{
-        background-color: #d9e0e6;
-        padding:  20px;
-        border-bottom: 1px solid #a9b6c4;
+    .input_block {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        .input_block-sum_info{
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-bottom: 40px;
-          @media screen and (max-width:375px){
-            display: block;
-            text-align: center;
-            margin-bottom: 20px;
-          }
-          .input_block-invest_sum{
-            border: 1px solid $borderColor;
-            border-radius: 20px;
-            background-color: #fff;
-            text-align: center;
-            font-size: 22px;
-            padding: 4px 20px;
-          }
+        justify-content: center;
+        flex-basis: 60%;
+        border: 1px solid $borderColor;
+        & > div {
+            flex-basis: 50%;
         }
-        .input_block-values{
-          margin-top: 20px;
-          padding: 0 7px;
-          display: flex;
-          justify-content: space-between;
-          .input_block-values-item{
-            position: relative;
-            .marker{
-              position: absolute;
-              right: 24px;
-              width: 2px;
-              &:before{
-                content: "";
-                position: absolute;
-                bottom: 35px;
-                left:25px;
-                border-left: 2px solid $borderColor ;
-                height: 10px;
-              }
-            }
-          }
-        }
-      }
-   
-      .input_block-time{
-        padding: 30px 20px;
-        background-color:#f7f7f7;
-        .btn-group-toggle{
-          display: flex;
-          justify-content: space-around;
-          margin-top: 35px;
-        }
-        
-      }
-     
-    }
-
-    .calc_block{
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      flex-basis: 40%;
-      border: 1px solid $borderColor;
-      padding: 25px 0;
-      @media screen and ( max-width:375px){
-        flex-basis: 100%;
-
-      }
-      & > div{
-        flex-basis: 50%;
-        // min-height: 300px;
-      }
-      .calc_block-info{
-        width: 100%;
-        padding: 0 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        .calc_block-profit{
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 30px;
-          .calc_block-profit_item {
-            width: 40%;
+        .input_block-amount {
+            background-color: #d9e0e6;
+            padding: 20px;
+            border-bottom: 1px solid #a9b6c4;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-          }
-          .calc_block-value{
-            font-size: 1.875rem;
-            margin-bottom: 10px;
-          }
-          
-        }
-        .calc_block-profit_rate{
-          border-top: 1px solid $borderColor;
-          border-bottom: 1px solid $borderColor;
-          padding: 25px 0;
-          .rate_percents{
-            font-size: 1.875rem;
-            font-weight: 400;
-          }
-        }
-        .calc_block-chart{
-          height: 20px;
-          background-color: #a9b6c4;
-          
-        }
-        .calc_block-chart_more{
-          background-color: #0092ff;
+            .input_block-sum_info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 40px;
+                @media screen and (max-width: 375px) {
+                    display: block;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                .input_block-invest_sum {
+                    width: 50%;
+                    border: 1px solid $borderColor;
+                    border-radius: 20px;
+                    background-color: #fff;
+                    text-align: center;
+                    font-size: 22px;
+                    padding: 4px 20px;
+                }
+            }
+            .input_block-values {
+                margin-top: 20px;
+                padding: 0 7px;
+                display: flex;
+                justify-content: space-between;
+                .input_block-values-item {
+                    position: relative;
+                    .marker {
+                        position: absolute;
+                        right: 24px;
+                        width: 2px;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: 35px;
+                            left: 25px;
+                            border-left: 2px solid $borderColor;
+                            height: 10px;
+                        }
+                    }
+                }
+            }
         }
 
-      }
-      .calc_block-total_sum{
-        width: 100%;
-        padding-top: 30px;
-        
-        .value{
-          font-size: 4rem;
-          font-weight: 300;
-          margin-bottom: 10px;
-          .rub_icon{
-            font-size: 3.5rem;
-          }
+        .input_block-time {
+            padding: 30px 20px;
+            background-color: #f7f7f7;
+            .btn-group-toggle {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 35px;
+                .btn{
+                    @media screen and (max-width:445px) {
+                        border-radius: 5px;
+                    }
+                }
+            }
         }
-        .btn{
-          text-transform: uppercase;
-          background-color: #ffc300;
-          padding: 10px 70px;
-          font-size: 1.275rem;
-          color: #a67700;
-        }
-      }
     }
-    
-  }  
 
+    .calc_block {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 40%;
+        border: 1px solid $borderColor;
+        padding: 25px 0;
+        @media screen and (max-width: 375px) {
+            flex-basis: 100%;
+        }
+        & > div {
+            flex-basis: 50%;
+        }
+        .calc_block-info {
+            width: 100%;
+            padding: 0 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            .calc_block-profit {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 30px;
+                .calc_block-profit_item {
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                }
+                .calc_block-value {
+                    font-size: 1.875rem;
+                    margin-bottom: 10px;
+                }
+            }
+            .calc_block-profit_rate {
+                border-top: 1px solid $borderColor;
+                border-bottom: 1px solid $borderColor;
+                padding: 25px 0;
+                .rate_percents {
+                    font-size: 1.775rem;
+                    font-weight: 400;
+                }
+            }
+            .calc_block-chart {
+                height: 20px;
+                background-color: #a9b6c4;
+            }
+            .calc_block-chart_more {
+                background-color: #0092ff;
+            }
+        }
+        .calc_block-total_sum {
+            width: 100%;
+            padding-top: 30px;
 
+            .value {
+                font-size: 4rem;
+                font-weight: 300;
+                margin-bottom: 10px;
+                .rub_icon {
+                    font-size: 3.5rem;
+                }
+            }
+            .btn {
+                text-transform: uppercase;
+                background-color: #ffc300;
+                padding: 10px 70px;
+                font-size: 1.275rem;
+                color: #a67700;
+                &:hover{
+                    background-color:  #a67700;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
 
+/*   range input  http://danielstern.ca/range.css/#/ */
 
-
-
-
-/*   range */
-
-input[type=range] {
-  -webkit-appearance: none;
-  width: 100%;
-  margin: 5.4px 0;
+input[type='range'] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 5.4px 0;
 }
-input[type=range]:focus {
-  outline: none;
+input[type='range']:focus {
+    outline: none;
 }
-input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 4.2px;
-  cursor: pointer;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.02), 0px 0px 1px rgba(13, 13, 13, 0.02);
-  background: rgba(49, 138, 209, 0.78);
-  border-radius: 25px;
-  border: 0px solid #010101;
+input[type='range']::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4.2px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.02), 0px 0px 1px rgba(13, 13, 13, 0.02);
+    background: rgba(49, 138, 209, 0.78);
+    border-radius: 25px;
+    border: 0px solid #010101;
 }
-input[type=range]::-webkit-slider-thumb {
-  box-shadow: 0.6px 0.6px 2.4px rgba(0, 0, 0, 0.82), 0px 0px 0.6px rgba(13, 13, 13, 0.82);
-  border: 0px solid #00001e;
-  height: 15px;
-  width: 15px;
-  border-radius: 15px;
-  background: #ffffff;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -5.4px;
+input[type='range']::-webkit-slider-thumb {
+    box-shadow: 0.6px 0.6px 2.4px rgba(0, 0, 0, 0.82), 0px 0px 0.6px rgba(13, 13, 13, 0.82);
+    border: 0px solid #00001e;
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -5.4px;
 }
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: rgba(70, 150, 214, 0.78);
+input[type='range']:focus::-webkit-slider-runnable-track {
+    background: rgba(70, 150, 214, 0.78);
 }
-input[type=range]::-moz-range-track {
-  width: 100%;
-  height: 4.2px;
-  cursor: pointer;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.02), 0px 0px 1px rgba(13, 13, 13, 0.02);
-  background: rgba(49, 138, 209, 0.78);
-  border-radius: 25px;
-  border: 0px solid #010101;
+input[type='range']::-moz-range-track {
+    width: 100%;
+    height: 4.2px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.02), 0px 0px 1px rgba(13, 13, 13, 0.02);
+    background: rgba(49, 138, 209, 0.78);
+    border-radius: 25px;
+    border: 0px solid #010101;
 }
-input[type=range]::-moz-range-thumb {
-  box-shadow: 0.6px 0.6px 2.4px rgba(0, 0, 0, 0.82), 0px 0px 0.6px rgba(13, 13, 13, 0.82);
-  border: 0px solid #00001e;
-  height: 15px;
-  width: 15px;
-  border-radius: 15px;
-  background: #ffffff;
-  cursor: pointer;
+input[type='range']::-moz-range-thumb {
+    box-shadow: 0.6px 0.6px 2.4px rgba(0, 0, 0, 0.82), 0px 0px 0.6px rgba(13, 13, 13, 0.82);
+    border: 0px solid #00001e;
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background: #ffffff;
+    cursor: pointer;
 }
-input[type=range]::-ms-track {
-  width: 100%;
-  height: 4.2px;
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
+input[type='range']::-ms-track {
+    width: 100%;
+    height: 4.2px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
 }
-input[type=range]::-ms-fill-lower {
-  background: rgba(42, 125, 190, 0.78);
-  border: 0px solid #010101;
-  border-radius: 50px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.02), 0px 0px 1px rgba(13, 13, 13, 0.02);
+input[type='range']::-ms-fill-lower {
+    background: rgba(42, 125, 190, 0.78);
+    border: 0px solid #010101;
+    border-radius: 50px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.02), 0px 0px 1px rgba(13, 13, 13, 0.02);
 }
-input[type=range]::-ms-fill-upper {
-  background: rgba(49, 138, 209, 0.78);
-  border: 0px solid #010101;
-  border-radius: 50px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.02), 0px 0px 1px rgba(13, 13, 13, 0.02);
+input[type='range']::-ms-fill-upper {
+    background: rgba(49, 138, 209, 0.78);
+    border: 0px solid #010101;
+    border-radius: 50px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.02), 0px 0px 1px rgba(13, 13, 13, 0.02);
 }
-input[type=range]::-ms-thumb {
-  box-shadow: 0.6px 0.6px 2.4px rgba(0, 0, 0, 0.82), 0px 0px 0.6px rgba(13, 13, 13, 0.82);
-  border: 0px solid #00001e;
-  height: 15px;
-  width: 15px;
-  border-radius: 15px;
-  background: #ffffff;
-  cursor: pointer;
-  height: 4.2px;
+input[type='range']::-ms-thumb {
+    box-shadow: 0.6px 0.6px 2.4px rgba(0, 0, 0, 0.82), 0px 0px 0.6px rgba(13, 13, 13, 0.82);
+    border: 0px solid #00001e;
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background: #ffffff;
+    cursor: pointer;
+    height: 4.2px;
 }
-input[type=range]:focus::-ms-fill-lower {
-  background: rgba(49, 138, 209, 0.78);
+input[type='range']:focus::-ms-fill-lower {
+    background: rgba(49, 138, 209, 0.78);
 }
-input[type=range]:focus::-ms-fill-upper {
-  background: rgba(70, 150, 214, 0.78);
+input[type='range']:focus::-ms-fill-upper {
+    background: rgba(70, 150, 214, 0.78);
 }
